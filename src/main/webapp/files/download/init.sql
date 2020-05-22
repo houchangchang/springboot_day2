@@ -1,0 +1,13 @@
+CREATE TABLE `book` (
+`id` INT(11) NOT NULL AUTO_INCREMENT,
+`cover` VARCHAR(255) DEFAULT '',
+`title` VARCHAR(255) NOT NULL DEFAULT '',
+`author` VARCHAR(255) DEFAULT '',
+`date` VARCHAR(255) DEFAULT '',
+`press` VARCHAR(255) DEFAULT '',
+`abs` VARCHAR(255) DEFAULT NULL,
+`cid` INT(11) DEFAULT NULL,
+PRIMARY KEY (`id`),
+KEY `fk_book_category_on_cid` (`cid`),
+CONSTRAINT `fk_book_category_on_cid` FOREIGN KEY (`cid`) REFERENCES `category` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
