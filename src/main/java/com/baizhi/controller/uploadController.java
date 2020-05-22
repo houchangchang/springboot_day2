@@ -34,7 +34,7 @@ public class uploadController {
 //        response.setHeader("content-disposition", "attachment;fileName=" + URLEncoder.encode(filename, "UTF-8"));
         response.setHeader("content-disposition", "inline;fileName=" + URLEncoder.encode(filename, "UTF-8"));
         ServletOutputStream os = response.getOutputStream();
-
+        System.out.println("duwnload文件------------");
 //        int n = 0;
 //        byte[] buffer = new byte[1024 * 4];
 //        while (EOF != (n = is.read(buffer))) {
