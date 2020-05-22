@@ -16,6 +16,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+        System.out.println("拦截器---");
         registry.addInterceptor(myInterceptor).addPathPatterns("/files/**").excludePathPatterns("/files/upload");
     }
 }
